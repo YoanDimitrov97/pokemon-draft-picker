@@ -1,0 +1,13 @@
+.wrapper {
+    width:100vw;
+    height:calc(100vh - 32px);
+    box-sizing:border-box;
+    margin:18px 8px 0 8px;
+
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 8px; 
+    max-width: calc(100% - 56px);
+    justify-content:center;
+}

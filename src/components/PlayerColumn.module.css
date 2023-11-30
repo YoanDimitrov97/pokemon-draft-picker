@@ -1,0 +1,10 @@
+.pkmn_wrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:212px;
+    gap:8px;
+    margin:8px 0 0 8px;
+}
+.orange.pkmn_wrapper {
+    margin:8px 8px 0 0;
+}
