@@ -8,7 +8,7 @@ export default function PokemonBox(props) {
       }`}
     >
       <div className={PokemonBoxCSS.pkmn_name}>
-        <p>POKEMON</p>
+        <p>{props.pkmn_name}</p>
       </div>
     </div>
   );
