@@ -11,7 +11,7 @@ export default function PokemonSelection() {
     const res = await fetch('https://api.steinhq.com/v1/storages/655a037dc5ad5604ce2c1251/Draft League');
     const data = await res.json();
     setRandomPokemon(data);
-    console.log(randomPokemon);
+    //console.log(randomPokemon);
   }
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function PokemonSelection() {
     return () => {
     }
   }, [])
-  console.log(randomPokemon)
+  // console.log(randomPokemon)
   return (
     <div className={PokemonSelectionCSS.wrapper}>
       {randomPokemon.map((pokemon, index) => (

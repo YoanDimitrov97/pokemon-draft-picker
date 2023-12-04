@@ -8,7 +8,9 @@ export const Context = React.createContext();
 export default function App() {
   const [playerOneTeam, setPlayerOneTeam] = useState([]);
   const [playerTwoTeam, setPlayerTwoTeam] = useState([]);
+  const [alreadySelectedPkmn, setAlreadySelectedPkmn] = useState([]);
   const [isPlayerOne, setIsPlayerOne] = useState(true);
+    console.log(playerOneTeam, playerTwoTeam, isPlayerOne);
   return (
     <Context.Provider
       value={[
@@ -16,14 +18,24 @@ export default function App() {
         setPlayerOneTeam,
         playerTwoTeam,
         setPlayerTwoTeam,
+        alreadySelectedPkmn,
+        setAlreadySelectedPkmn,
         isPlayerOne,
-        setIsPlayerOne
+        setIsPlayerOne,
       ]}
     >
       <div className={AppCSS.wrapper}>
-        <PlayerColumn playerName="Player 1" playerColor="purple" />
+        <PlayerColumn
+          playerName="Player 1"
+          playerColor="purple"
+          pkmn={playerOneTeam}
+        />
         <PokemonSelection />
-        <PlayerColumn playerName="Player 2" playerColor="orange" />
+        <PlayerColumn
+          playerName="Player 2"
+          playerColor="orange"
+          pkmn={playerTwoTeam}
+        />
       </div>
     </Context.Provider>
   );

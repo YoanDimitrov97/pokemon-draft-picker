@@ -8,7 +8,7 @@
     display:flex;
 }
 
-.opacity_mask {
+.opacity_mask, .opacity_mask_banned {
     z-index:40;
     position:absolute;
     top:0;
@@ -17,6 +17,11 @@
     height:100%;
     background-color:black; 
     opacity:.2;
+}
+
+.opacity_mask_banned {
+    opacity:.5;
+    z-index:90;
 }
 .bgn_mask {
     z-index:20;
@@ -37,10 +42,6 @@
     left:22%;
 }
 
-.pkmn_box:hover > .pkmn_image {
-    scale:1.5;
-}
-
 .pkmn_name {
     background:#220A3D;
     position:absolute;
@@ -57,4 +58,13 @@
 .pkmn_name p {
     font-family:"Exo";
     color:white;
+}
+
+.ban_image {
+    position:absolute;
+    top:8px;
+    left:8px;
+    z-index:100;
+    width:calc(100% - 16px);
+    height:calc(100% - 25px - 16px);
 }
